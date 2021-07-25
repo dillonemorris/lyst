@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { animated } from '@react-spring/web'
+import styled from 'styled-components';
+import { animated } from '@react-spring/web';
 
 export const Container = styled('div')`
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #191b21;
+  background: #fff;
   overflow: hidden;
   font-family: ui-monospace, monospace;
   font-size: 14px;
@@ -17,7 +17,7 @@ export const Container = styled('div')`
   align-items: center;
   height: 100%;
   justify-content: center;
-`
+`;
 
 export const Frame = styled('div')`
   position: relative;
@@ -28,11 +28,28 @@ export const Frame = styled('div')`
   vertical-align: middle;
   color: #24292e;
   fill: #24292e;
-`
+`;
 
-export const Title = styled('span')`
+export const Item = styled('div')`
+  display: flex;
+  align-items: center;
+`;
+
+export const Input = styled('input')`
+  font-size: 14px;
+  border: none;
+  font-family: ui-monospace, monospace;
+  cursor: auto;
+
+  &:focus {
+    outline: none;
+    padding: 0;
+  }
+`;
+
+export const Title = styled('div')`
   vertical-align: middle;
-`
+`;
 
 export const Content = styled(animated.div)`
   will-change: transform, opacity, height;
@@ -40,7 +57,7 @@ export const Content = styled(animated.div)`
   padding: 0px 0px 0px 14px;
   border-left: 1px dashed rgba(255, 255, 255, 0.4);
   overflow: hidden;
-`
+`;
 
 export const toggle = {
   width: '1em',
@@ -48,4 +65,4 @@ export const toggle = {
   marginRight: 10,
   cursor: 'pointer',
   verticalAlign: 'middle',
-}
+};
